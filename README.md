@@ -7,6 +7,8 @@
     ![navbar-image](images/nav-bar.png)
 1. We've already added a `peopleContainer` class to each element in our grid. In your `script.js` select the `peopleContainer` class using jQuery and save the array of `<div>`s in a variable.
 1. Login to your Airtable account and click "Add a base" & "Import a spreadsheet" and import the `famousPeople.csv` in this repository. Your database will probably be named `Imported Base`, change the name to be something like `famousPeople`. You should also change the table name of the table (looks like the tab of a spreadsheet) in our database to something like `peeps`. Look through the data to see what your database is storing.
+1. Create a `secrets.js` file. Notice that this file has already been added to our `.gitignore` and imported in our `index.html`. After adding the new file, push your code up to GitHub to make sure your `secrets.js` is ignored.
+1. Create a variable to store your Airtable api key in `secrets.js`
 1. Now set up an `ajax` request in your javascript file to `GET` the list of famous people data from Airtable. Use `console.log` to make sure your response has the data. If you want to retain the same order as they are in the database, you'll need to add the `view=` parameter in your API call: `https://api.airtable.com/v0/appNIiSpVkct0kPPv/table?view=Grid%20view`
 1. Once you have set up your `ajax` request, loop through the data in your response to [`append`](http://api.jquery.com/append/) the `name` of each famous person in an `<h3>` on each `peopleContainer`
   ![names-grid](images/names-grid.png)
